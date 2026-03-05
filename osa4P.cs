@@ -15,6 +15,7 @@ namespace PraktilinetöödVitaliiAB
                 Console.WriteLine("Sisesta min 2 itaalia toidu: ");
                 string lause = Console.ReadLine();
                 text.WriteLine(lause);
+
                 text.Close();
             }
             catch (Exception)
@@ -22,23 +23,34 @@ namespace PraktilinetöödVitaliiAB
                 Console.WriteLine("Mingi viga failiga");
             }
         }
-        public static List<string> retseptid_loe()
+        public static void retseptid_loe()
         {
-            List<string> toit_list = new List<string>();
             try
             {
-                string path = @$"..\..\..\Retseptid.txt";
-                foreach (string rida in File.ReadAllLines(path))
-                {
-                    toit_list.Add(rida);
-                }
-                foreach (string i in toit_list) Console.WriteLine(i);
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Retseptid.txt");
+                StreamReader text = new StreamReader(path);
+                string laused = text.ReadToEnd();
+                text.Close();
+                Console.WriteLine(laused);
             }
             catch (Exception)
             {
-                Console.WriteLine("Viga failiga");
+                Console.WriteLine("Mingi viga failiga, ei saa faili lugeda");
             }
-            return toit_list;
+
+
+        }
+        public static void Muuda_Engredient()
+        {
+            try
+            {
+
+            }
+            catch (Exception d)
+            {
+
+                Console.WriteLine(d);
+            }
         }
 
     }

@@ -22,6 +22,10 @@ namespace PraktilinetöödVitaliiAB
                 {
                     osa4P.retseptid_loe(); break;
                 }
+                else if (valik == 3)
+                {
+
+                }
             }
         }
     }
