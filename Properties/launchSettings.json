@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PraktilinetöödVItaliiAB": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
